@@ -1,0 +1,132 @@
+﻿@model PagedList.IPagedList<diplom.Models.products>
+@using PagedList.Mvc
+@using System.Web;
+@{
+    ViewData["Title"] = "Каталог";
+
+}
+<aside>
+    <nav class="menu ">
+        <nav class="sub-menu">
+
+            @foreach (var el in ViewBag.Categories)
+            {   
+                    <form method="get">
+                        <div style="display:none">
+                            <p>
+                                <input type="text" name="category" value="@el.name" />
+                            </p>
+                        </div>
+                        <input type="submit" value="@el.name" />
+                    </form>
+            }
+            <form asp-action="Privacy" asp-controller="Home">
+                <input type="submit" value="Сбросить" class="btn-filer" />
+            </form>
+
+        </nav>
+    </nav>
+</aside>
+
+<article>
+
+    @foreach (var el in Model)
+    {
+        <div class="catalog-item">
+
+            <div class="catalog-item-img">
+                <img src="@el.imgs" alt="Stand#1" width="200" height="185" align="left" vspace="5" hspace="5" />
+            </div>
+            <div class="catalog-item-descr">
+                <div class="item-name"> @el.name </div>
+                <div class="item-descr">@el.shortdescr </div>
+            </div>
+
+
+
+
+
+
+            <div class="catalog-item-store">
+                <form asp-action="View" asp-controller="home">
+                    <div style="display:none">
+                        <p>
+                            <input type="text" name="I" value="@el.id" />
+                        </p>
+                    </div>
+                    <input type="submit" value="Подробнее" class="btn btn-outline-primary" />
+                </form>
+            </div>
+
+        </div>
+
+    }
+    <p>Страница @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber) из @Model.PageCount</p>
+
+    <div class="btn-groupp">
+        @for (int i = 1; i <= @Model.PageCount; i++)
+        {
+            @if (i == Model.PageNumber)
+            {
+
+                <form method="get">
+                    <div style="display:none">
+                        <p>
+                            <input type="text" name="page" value="@i" />
+                            <input type="text" name="category" value="@ViewData["CID"].ToString()" />
+                        </p>
+                    </div>
+                    <input type="submit" value="@i" class="btn btn-light active" />
+                </form>
+
+            }
+            else
+            {
+                <form method="get">
+                    <div style="display:none">
+                        <p>
+                            <input type="text" name="page" value="@i" />
+                            <input type="text" name="category" value="@ViewData["CID"].ToString()" />
+                        </p>
+                    </div>
+                    <input type="submit" value="@i" class="btn btn-light" />
+                </form>
+            }
+        }
+    </div>
+    <nav class="menum">
+        <nav class="sub-menum">
+
+            @foreach (var el in ViewBag.Categories)
+            {
+                if (el.name == ViewData["CID"].ToString())
+                {
+                    <form method="get">
+                        <div style="display:none">
+                            <p>
+                                <input type="text" name="category" value="@el.name" />
+                            </p>
+                        </div>
+                        <input type="submit" value="@el.name" class="active" />
+                    </form>
+                }
+                else
+                {
+                    <form method="get">
+                        <div style="display:none">
+                            <p>
+                                <input type="text" name="category" value="@el.name" />
+                            </p>
+                        </div>
+                        <input type="submit" value="@el.name" />
+                    </form>
+                }
+
+            }
+            <form asp-action="Privacy" asp-controller="Home">
+                <input type="submit" value="Сбросить" class="btn-filer" />
+            </form>
+
+        </nav>
+    </nav>
+</article>

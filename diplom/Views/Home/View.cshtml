@@ -1,0 +1,75 @@
+﻿@model diplom.Models.products
+@{
+    ViewData["Title"] = $"{@Model.name}";
+}
+<div class="vcont" id="Print">
+    <div class="imgholder">
+        <img src="@Model.imgs" alt="@Model.name" class="wh1">
+    </div>
+
+    <div class="cdescr">
+        <h3>Название</h3>
+        <span>@Model.name</span>
+        <h3>Описание</h3>
+        <span>@Model.longdescr</span>
+        
+    </div>
+</div>
+<div class="mdescr">
+    <hr />
+    <dl class="tabl">
+        <dt class="tabel">
+            @Html.DisplayNameFor(model => model.name)
+        </dt>
+        <dd class="tabel">
+            @Html.DisplayFor(model => model.name)
+        </dd>
+        <dt class="tabel">
+            @Html.DisplayNameFor(model => model.longdescr)
+        </dt>
+        <dd class="tabel">
+            @Html.DisplayFor(model => model.longdescr)
+        </dd>
+        <dt class="tabel">
+            @Html.DisplayNameFor(model => model.shortdescr)
+        </dt>
+        <dd class="tabel">
+            @Html.DisplayFor(model => model.shortdescr)
+        </dd>
+       
+    </dl>
+</div>
+
+<div>
+    <h2>Технические характеристики</h2>
+        <div class="container">
+            @foreach (var el in ViewBag.Chars)
+            {
+                var a = el.Split(':');
+                <div class="row">
+                    <div class="col borderedcol">
+                        <h4>@a[0]</h4>
+                    </div>
+                    <div class="col borderedcol">
+                        <h4>@a[1]</h4>
+                    </div>
+                </div>
+             }
+        </div>
+    
+</div>
+
+<div>
+    <a asp-action="Privacy">Back to List</a>
+</div>
+<input type="button" onclick="printDiv('Print')" value="Распечатать" class="btn btn-outline-secondary" id="catpr" />
+
+<script language="javascript">
+        function printDiv(divName) {
+            var printContents = document.getElementById(divName).innerHTML;
+            var originalContents = document.body.innerHTML;
+            document.body.innerHTML = printContents;
+            window.print();
+            document.body.innerHTML = originalContents;
+        }
+</script>

@@ -27,10 +27,20 @@ namespace diplom.Controllers
         
         public IActionResult Index()
         {
+            ViewData["CID"] = db.categories.ToList();
             ViewBag.Categories = db.categories.ToList();
             return View();
         }
-        
+
+        public IActionResult View(int I)
+        {
+            var Catalogs = db.product.ToList().Where(c => c.id == I).Last();
+            ViewBag.Chars = Catalogs.characteristic.Split(';');
+            ViewData["TID"] = Catalogs.name;
+            return View(Catalogs);
+        }
+
+
         public IActionResult Privacy(string category, int? page)
         {
             var Catalogs = db.product.ToList();

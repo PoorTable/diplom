@@ -26,7 +26,7 @@ namespace diplom
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllersWithViews();
-            string connection = "Data Source=SQL5103.site4now.net;Initial Catalog=DB_A724FF_poortable147;User Id=DB_A724FF_poortable147_admin;Password=Snoww147";
+            string connection = "Data Source=SQL5074.site4now.net;Initial Catalog=DB_A724FF_poortable147;User Id=DB_A724FF_poortable147_admin;Password=Snoww147";
             services.AddDbContext<AppDBContext>((Action<DbContextOptionsBuilder>)(options => options.UseSqlServer(connection)));
             MvcServiceCollectionExtensions.AddControllersWithViews(services);
             MvcServiceCollectionExtensions.AddMvc(services);

@@ -19,6 +19,6 @@ namespace diplom.Models
 
         public string imgs { get; set; }
 
-        public int price { get; set; }
+        public string characteristic { get; set; }
     }
 }

@@ -32,6 +32,10 @@ namespace diplom.Controllers
             return View();
         }
 
+        public IActionResult Info()
+        {
+            return View();
+        }
         public IActionResult View(int I)
         {
             var Catalogs = db.product.ToList().Where(c => c.id == I).Last();

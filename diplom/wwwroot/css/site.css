@@ -108,6 +108,7 @@ body {
     border: 0;
 }
 .sss {
+    max-width: 1366px;
     display: flex;
     margin-right: auto;
     margin-left: auto;
@@ -115,7 +116,7 @@ body {
     margin-bottom: 10px;
 }
 .containerr {
-    
+ 
     padding-right: 15px;
     padding-left: 15px;
     margin-right: auto;

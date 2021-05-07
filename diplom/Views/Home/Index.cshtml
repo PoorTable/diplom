@@ -3,41 +3,7 @@
 }
 
 <aside>
-    <nav class="menu ">
-        <nav class="sub-menu">
-
-            @foreach (var el in ViewBag.Categories)
-            {
-                if (el.name == ViewData["CID"].ToString())
-                {
-                    <form asp-action="Privacy" asp-controller="Home">
-                        <div style="display:none">
-                            <p>
-                                <input type="text" name="category" value="@el.name" />
-                            </p>
-                        </div>
-                        <input type="submit" value="@el.name" class="active" />
-                    </form>
-                }
-                else
-                {
-                    <form asp-action="Privacy" asp-controller="Home">
-                        <div style="display:none">
-                            <p>
-                                <input type="text" name="category" value="@el.name" />
-                            </p>
-                        </div>
-                        <input type="submit" value="@el.name" />
-                    </form>
-                }
-
-            }
-            <form asp-action="Privacy" asp-controller="Home">
-                <input type="submit" value="Сбросить" class="btn-filer" />
-            </form>
-
-        </nav>
-    </nav>
+    <a target="_blank" href="https://nochi.com/weather/gomel-41770"><img src="https://w.bookcdn.com/weather/picture/32_41770_1_20_3498db_250_2980b9_ffffff_ffffff_1_2071c9_ffffff_0_6.png?scode=124&domid=589&anc_id=47363" alt="booked.net" /></a>
 </aside>
 
 <article>
@@ -81,7 +47,7 @@
     </div>
     <div class="inrow">
         <!-- weather widget start -->
-        <a target="_blank" href="https://nochi.com/weather/gomel-41770"><img src="https://w.bookcdn.com/weather/picture/32_41770_1_20_3498db_250_2980b9_ffffff_ffffff_1_2071c9_ffffff_0_6.png?scode=124&domid=589&anc_id=47363" alt="booked.net" /></a>
+       
         <!-- weather widget end -->
 
         <p class="spw">

@@ -11,7 +11,7 @@
 
             @foreach (var el in ViewBag.Categories)
             {   
-                    <form method="get">
+                    <form method="get" style=" border: 1px solid blue; border-radius: 16px; margin-bottom:15px" >
                         <div style="display:none">
                             <p>
                                 <input type="text" name="category" value="@el.name" />
@@ -20,7 +20,7 @@
                         <input type="submit" value="@el.name" />
                     </form>
             }
-            <form asp-action="Privacy" asp-controller="Home">
+            <form asp-action="Privacy" asp-controller="Home" style=" border: 1px solid blue; border-radius: 16px;">
                 <input type="submit" value="Сбросить" class="btn-filer" />
             </form>
 

@@ -181,7 +181,12 @@ aside input :hover{
     margin-top: 15px;
 
 }
-
+.left{
+    text-align:left
+}
+.centr{
+    text-align:center
+}
 @media (max-width: 768px) {
     aside{
         display:none;

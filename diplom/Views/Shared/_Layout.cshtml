@@ -11,12 +11,15 @@
 <body>
     <header>
         <div class="sss">
-            <div class="containerr">
-               
+            <div class="containerr" style="
+                                     display: flex;
+                                     flex-direction: row;">
                 <img src="~/logo.png" alt="..." style="width: 100px; height: 100px;">
-                <span style="
-                color: #386fc3;
-                font-size: 25pt;">БГМСервисГрупп</span>
+                <div style="margin-left:5px">
+                    <span style="color: #386fc3;">БГМСервисГрупп</span>
+                    <p style="margin:0">Г.Гомель, ул. Текстильная 3а,</p>
+                    <p>кабинет 14</p>
+                </div>
             </div>
 
 
@@ -44,6 +47,9 @@
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Info">Контакты</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Customer">Заказчики</a>
                             </li>
                         </ul>
                     </div>

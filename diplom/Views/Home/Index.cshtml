@@ -10,7 +10,7 @@
             {
                 if (el.name == ViewData["CID"].ToString())
                 {
-                    <form method="get">
+                    <form asp-action="Privacy" asp-controller="Home">
                         <div style="display:none">
                             <p>
                                 <input type="text" name="category" value="@el.name" />
@@ -21,7 +21,7 @@
                 }
                 else
                 {
-                    <form method="get">
+                    <form asp-action="Privacy" asp-controller="Home">
                         <div style="display:none">
                             <p>
                                 <input type="text" name="category" value="@el.name" />

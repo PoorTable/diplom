@@ -8,6 +8,10 @@ centredcarousel{
     height: 50vh,
 
 }
+.asid {
+    background: #00000000;
+    padding: 0;
+}
 #carouselExampleCaptions {
     /*width: 50vw;*/
     height: 50vh;
@@ -160,14 +164,14 @@ aside input :hover{
 .mdescr{
     display: none;
 }
-.inrow{
+.inrow {
     padding: 15px;
     display: flex;
+    justify-content: center;
 }
 .spw{
     width: 40vw;
-    padding-left: 5vw;
-    text-indent: 2vw;
+    
 }
 .print {
     width: fit-content;
@@ -190,6 +194,9 @@ aside input :hover{
 @media (max-width: 768px) {
     aside{
         display:none;
+    }
+    .maps {
+        text-align: center;
     }
     article {
         margin-left: 0px;
@@ -222,6 +229,7 @@ aside input :hover{
     .mdescr {
         display: none;
     }
+    
 }
 @media (min-width: 900px){
 .catalog-item-img img{
@@ -229,7 +237,15 @@ aside input :hover{
     width: 20vw;
 }
 }
-@media (max-width: 560px){
+
+@media (min-width: 650px) {
+    .maps {
+        display: flex;
+        justify-content: space-evenly;
+    }
+}
+
+@media (max-width: 560px) {
     #carouselExampleFade {
         width: auto;
     }

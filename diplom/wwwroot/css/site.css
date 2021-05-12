@@ -13,17 +13,17 @@ a.navbar-brand {
 
 /* Track */
 ::-webkit-scrollbar-track {
-  background: #0ab9ee;
+    background: #aba2a2;
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: #888;
+    background: #4ea3ec;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: #555;
+    background: #0e98e4;
 }
 /* Provide sufficient contrast against white background */
 a {

@@ -63,7 +63,7 @@
     }
     <p>Страница @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber) из @Model.PageCount</p>
 
-    <div class="btn-groupp">
+    <div class="btn-groupp" style="margin-bottom:15px">
         @for (int i = 1; i <= @Model.PageCount; i++)
         {
             @if (i == Model.PageNumber)

@@ -8,6 +8,11 @@ centredcarousel{
     height: 50vh,
 
 }
+.inpt :hover {
+    background-color: #6c737073;
+    border-radius: 16px;
+}
+
 .asid {
     background: #00000000;
     padding: 0;

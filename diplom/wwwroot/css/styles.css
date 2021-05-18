@@ -126,13 +126,21 @@ aside input :hover{
     font-size: 0.7rem;
     text-align: center;
 }
+.nav-link:focus, .nav-link:hover {
+    color: #6283dc !important;
+    text-shadow: 0 0 15px #ffffff;
+    background-color: #ffffffc7;
+    border-radius: 10px;
+}
 #map {
-    
     margin-bottom: 15px;
 }
+
 .active {
-    color: aliceblue !important;
-    text-shadow: 0 0 10px #d8e1f2;
+    color: #6283dc !important;
+    text-shadow: 0 0 15px #ffffff;
+    background-color: #ffffffc7;
+    border-radius: 10px;
 }
 .btn-groupp {
     margin-left: auto;

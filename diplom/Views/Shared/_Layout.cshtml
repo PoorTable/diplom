@@ -16,7 +16,7 @@
                                      display: flex;
                                      flex-direction: row;">
                 <img src="~/logo.png" alt="..." style="width: 100px; height: 100px;">
-                <div style="margin-left:5px">
+                <div style="margin-left: 15vw;">
                     <span style="color: #386fc3;">БГМСервисГрупп</span>
                     <p style="margin:0">Г.Гомель, ул. Текстильная 3а,</p>
                     <p>кабинет 14</p>
@@ -24,27 +24,32 @@
             </div>
 
 
-            <div class="containerr">
+            <div class="containerr" style="flex-direction: column;">
                 <p style="margin:0">+375 (29) 656-63-74</p>
                 <p style="margin:0">+375 (29) 345-42-78</p>
                 <p style="margin:0">e-mail: bgms2001@mail.ru</p>
             </div>
 
         </div>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
-            <div class="container">
-
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light" style=" margin-bottom: 1.3rem; max-width: 1366px; margin-left: auto; margin-right: auto; background-color: #6283dc !important; ">
+            <div class="container-fluid">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
-                    <ul class="navbar-nav flex-grow-1">
+                @{var a = ViewData["Title"].ToString() == "Главная" ? "active" : "asd";}
+                @{var o = ViewData["Title"].ToString() == "Отзывы" ? "active" : "asd";}
+                @{var k = ViewData["Title"].ToString() == "Каталог" ? "active" : "asd";}
+                @{var r = ViewData["Title"].ToString() == "Контакты" ? "active" : "asd";}
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Главная</a>
+                            <a class="nav-link text-dark @a" asp-area="" asp-controller="Home" asp-action="Index">Главная</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark  @o" asp-area="" asp-controller="Home" asp-action="Customer">Отзывы</a>
                         </li>
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle text-dark" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <a class="nav-link dropdown-toggle text-dark  @k" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                 Каталог
                             </a>
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -59,20 +64,20 @@
                                 <li><a class="dropdown-item text-dark" asp-area="" asp-controller="Home" asp-action="Privacy" asp-route-category="Ремонтные работы">Ремонтные работы</a></li>
                             </ul>
                         </li>
-
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Info">Контакты</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Customer">Отзывы</a>
+                            <a class="nav-link text-dark @r" asp-area="" asp-controller="Home" asp-action="Info">Контакты</a>
                         </li>
                     </ul>
+                    <form class="d-flex">
+                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Поиск">
+                        <button class="btn btn-outline-success" type="submit" style="color: aliceblue; border-color: aliceblue; ">Поиск</button>
+                    </form>
                 </div>
             </div>
         </nav>
-
+        
     </header>
-    <div class="container">
+    <div class="container" style=" max-width: 1366px; padding: 0;">
         <main role="main" class="pb-3">
             @RenderBody()
         </main>

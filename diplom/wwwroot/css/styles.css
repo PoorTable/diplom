@@ -131,11 +131,8 @@ aside input :hover{
     margin-bottom: 15px;
 }
 .active {
-    color: #000000;
-    -moz-text-shadow: 0 0 10px #c00;
-    -webkit-text-shadow: 0 0 10px #c00;
-    text-shadow: 0 0 10px #c00;
-    background-color: #cbfffd40;
+    color: aliceblue !important;
+    text-shadow: 0 0 10px #d8e1f2;
 }
 .btn-groupp {
     margin-left: auto;
@@ -172,11 +169,14 @@ aside input :hover{
 .inrow {
     padding: 15px;
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
+    padding-left: 0;
+    padding-right: 0;
 }
-.spw{
-    width: 40vw;
-    
+.spw {
+    padding-left: 15px;
+    inline-size: fit-content;
+    text-indent: 2vw;
 }
 .print {
     width: fit-content;

@@ -121,11 +121,15 @@ body {
     margin-left: auto;
     margin-top: 10px;
     margin-bottom: 10px;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: nowrap;
+    justify-content: space-between;
 }
 .containerr {
- 
+    display: flex;
+    align-items: center;
+    align-content: flex-start;
     padding-right: 15px;
     padding-left: 15px;
-    margin-right: auto;
-    margin-left: auto;
 }

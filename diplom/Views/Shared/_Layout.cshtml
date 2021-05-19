@@ -68,8 +68,8 @@
                             <a class="nav-link text-white @r" asp-area="" asp-controller="Home" asp-action="Info">Контакты</a>
                         </li>
                     </ul>
-                    <form class="d-flex">
-                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Поиск">
+                    <form class="d-flex" asp-controller="Home" asp-action="Privacy">
+                        <input class="form-control me-2" name="category" value="Прочие изделия" type="search" placeholder="Метрополитен" aria-label="Поиск">
                         <button class="btn btn-outline-success" type="submit" style="color: aliceblue; border-color: aliceblue; ">Поиск</button>
                     </form>
                 </div>

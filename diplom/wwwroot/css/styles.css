@@ -89,13 +89,15 @@ aside input :hover{
 
 
 .catalog-item {
+    max-width: 90vw;
     display: flex;
+    justify-content: space-between;
     position: relative;
     padding: 35px 30px 30px;
     border: 1px solid #ededec;
     transition: box-shadow .4s;
     margin-bottom: -1px;
-    width: fit-content;
+    margin: 0 auto;
 }
 .catalog-item-img {
     -ms-flex: 0 0 26%;

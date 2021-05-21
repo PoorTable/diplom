@@ -12,19 +12,20 @@ centredcarousel{
     background-color: #6c737073;
     border-radius: 16px;
 }
-
+.crd {
+    max-width: 18rem;
+    margin: 15px
+}
 .asid {
     background: #00000000;
     padding: 0;
 }
 #carouselExampleCaptions {
-    /*width: 50vw;*/
     height: 50vh;
     margin-right: auto;
     margin-left: auto;
 }
 #carouselExampleCaptions img {
-    /*width: 50vw;*/
     height: 50vh;
 }
 article {
@@ -213,6 +214,11 @@ main {
     text-align:center
 }
 @media (max-width: 768px) {
+    .crd {
+        max-width: 98vw;
+        margin: 0 auto;
+        margin-bottom: 15px;
+    }
     aside{
         display:none;
     }

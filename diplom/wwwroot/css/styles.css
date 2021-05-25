@@ -1,5 +1,4 @@
 aside {
-    background: #f0f0f0;
     padding: 10px;
     width: 200px;
     float: left;
@@ -8,12 +7,18 @@ centredcarousel{
     height: 50vh,
 
 }
+.htt {
+    font-size: 20px;
+}
+.activecat {
+    background-color: #caceda;
+}
 .inpt :hover {
     background-color: #6c737073;
     border-radius: 16px;
 }
 .crd {
-    max-width: 18rem;
+    max-width: 30%;
     margin: 15px
 }
 .asid {

@@ -10,8 +10,9 @@
         <nav class="sub-menu">
 
             @foreach (var el in ViewBag.Categories)
-            {   
-                    <form method="get" style=" border: 1px solid blue; border-radius: 16px; margin-bottom:15px" class="inpt">
+            {
+                var l = ViewData["CID"].ToString() == el.name ? "activecat" : "asd";
+                    <form method="get" class="inpt @l"style=" border: 1px solid blue; border-radius: 16px; margin-bottom:15px" class="">
                         <div style="display:none">
                             <p>
                                 <input type="text" name="category" value="@el.name" />

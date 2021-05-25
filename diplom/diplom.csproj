@@ -19,4 +19,14 @@
     <Folder Include="wwwroot\lib\jquery-validation\" />
     <Folder Include="wwwroot\lib\jquery-validation-unobtrusive\" />
   </ItemGroup>
+  <ItemGroup>
+    <Content Remove="wwwroot\Отзыв Гомель.PDF" />
+    <Content Remove="wwwroot\Отзыв Жлобин.pdf" />
+    <Content Remove="wwwroot\Отзыв о стенде БГ-ТРП1.000.00 %28брест%29.pdf" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="wwwroot\Отзыв Гомель.PDF" />
+    <None Include="wwwroot\Отзыв Жлобин.pdf" />
+    <None Include="wwwroot\Отзыв о стенде БГ-ТРП1.000.00 %28брест%29.pdf" />
+  </ItemGroup>
 </Project>
